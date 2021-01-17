@@ -5,7 +5,6 @@
 Deno module based on [crypto-random-string](https://github.com/sindresorhus/crypto-random-string). Useful for creating an identifier, slug, salt, PIN code, fixture, etc.
 
 ## Import Module
----
 
 ```typescript
 import { cryptoRandomString, cryptoRandomStringAsync } from "https://deno.land/x/crypto_random_string@1.0.0/mod.ts"
@@ -14,7 +13,6 @@ import { cryptoRandomString, cryptoRandomStringAsync } from "https://github.com/
 ```
 
 ## Usage
----
 
 **NOTE:** Outputs shown below are merely examples. The function will generate random string each time.
 
@@ -56,7 +54,6 @@ await cryptoRandomStringAsync({length: 10, characters: 'abc'}); // 'abcbbbacbb'
 ```
 
 ## API
----
 
 ### cryptoRandomString(options)
 
@@ -104,6 +101,5 @@ Use only characters from a custom set of allowed characters.
 Cannot be set at the same time as the `type` option.
 
 ## Licensing
----
 
 [MIT](https://github.com/piyush-bhatt/crypto-random-string/blob/main/LICENSE) licensed 
