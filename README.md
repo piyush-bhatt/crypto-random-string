@@ -5,6 +5,7 @@
 Deno module based on [crypto-random-string](https://github.com/sindresorhus/crypto-random-string). Useful for creating an identifier, slug, salt, PIN code, fixture, etc.
 
 ## Import Module
+---
 
 ```typescript
 import { cryptoRandomString, cryptoRandomStringAsync } from "https://deno.land/x/crypto_random_string@1.0.0/mod.ts"
@@ -13,35 +14,49 @@ import { cryptoRandomString, cryptoRandomStringAsync } from "https://github.com/
 ```
 
 ## Usage
+---
+
+**NOTE:** Outputs shown below are merely examples. The function will generate random string each time.
+
 
 ```typescript
 
-cryptoRandomString({length: 10});
-//=> '2cf05d94db'
+cryptoRandomString({length: 10}); // '0696cb9e70'
 
-cryptoRandomString({length: 10, type: 'base64'});
-//=> 'YMiMbaQl6I'
+await cryptoRandomStringAsync({length: 10}); // 'c8d4b0140d'
 
-cryptoRandomString({length: 10, type: 'url-safe'});
-//=> 'YN-tqc8pOw'
+cryptoRandomString({length: 10, type: 'base64'}); // 'dw3mgWC5uO'
 
-cryptoRandomString({length: 10, type: 'numeric'});
-//=> '8314659141'
+await cryptoRandomStringAsync({length: 10, type: 'base64'}); // 'k6ALljZx+E'
 
-cryptoRandomString({length: 6, type: 'distinguishable'});
-//=> 'CDEHKM'
+cryptoRandomString({length: 10, type: 'url-safe'}); // '0pN1Y2Jz.X'
 
-cryptoRandomString({length: 10, type: 'ascii-printable'});
-//=> '`#Rt8$IK>B'
+await cryptoRandomStringAsync({length: 10, type: 'url-safe'}); // '7.F5oBY9Qy'
 
-cryptoRandomString({length: 10, type: 'alphanumeric'});
-//=> 'DMuKL8YtE7'
+cryptoRandomString({length: 10, type: 'numeric'}); // '1639380067'
 
-cryptoRandomString({length: 10, characters: 'abc'});
-//=> 'abaaccabac'
+await cryptoRandomStringAsync({length: 10, type: 'numeric'}); // '0923903115'
+
+cryptoRandomString({length: 6, type: 'distinguishable'}); // 'H4HH5D'
+
+await cryptoRandomStringAsync({length: 6, type: 'distinguishable'}); // 'D2Y254'
+
+cryptoRandomString({length: 10, type: 'ascii-printable'}); // '#I&J.GP./9'
+
+await cryptoRandomStringAsync({length: 10, type: 'ascii-printable'}); // '7t%FxZkyL('
+
+cryptoRandomString({length: 10, type: 'alphanumeric'}); // 'ZtgC2J6aU5'
+
+await cryptoRandomStringAsync({length: 10, type: 'alphanumeric'}); // 'FELQVN9S8H'
+
+cryptoRandomString({length: 10, characters: 'abc'}); // 'abcabccbcc'
+
+await cryptoRandomStringAsync({length: 10, characters: 'abc'}); // 'abcbbbacbb'
+
 ```
 
 ## API
+---
 
 ### cryptoRandomString(options)
 
@@ -89,5 +104,6 @@ Use only characters from a custom set of allowed characters.
 Cannot be set at the same time as the `type` option.
 
 ## Licensing
+---
 
 [MIT](https://github.com/piyush-bhatt/crypto-random-string/blob/main/LICENSE) licensed 
