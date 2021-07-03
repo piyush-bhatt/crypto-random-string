@@ -43,7 +43,6 @@ function randomBytes(size: number) {
     crypto.getRandomValues(bytes);
   }
 
-  console.log(bytes);
   return bytes;
 }
 

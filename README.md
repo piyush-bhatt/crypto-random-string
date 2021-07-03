@@ -7,9 +7,9 @@ Deno module based on [crypto-random-string](https://github.com/sindresorhus/cryp
 ## Import Module
 
 ```typescript
-import { cryptoRandomString, cryptoRandomStringAsync } from "https://deno.land/x/crypto_random_string@1.0.0/mod.ts"
+import { cryptoRandomString } from "https://deno.land/x/crypto_random_string@1.0.0/mod.ts"
 // or
-import { cryptoRandomString, cryptoRandomStringAsync } from "https://github.com/piyush-bhatt/crypto-random-string/raw/main/mod.ts"
+import { cryptoRandomString } from "https://github.com/piyush-bhatt/crypto-random-string/raw/main/mod.ts"
 ```
 
 ## Usage
@@ -21,35 +21,19 @@ import { cryptoRandomString, cryptoRandomStringAsync } from "https://github.com/
 
 cryptoRandomString({length: 10}); // '0696cb9e70'
 
-await cryptoRandomStringAsync({length: 10}); // 'c8d4b0140d'
-
 cryptoRandomString({length: 10, type: 'base64'}); // 'dw3mgWC5uO'
-
-await cryptoRandomStringAsync({length: 10, type: 'base64'}); // 'k6ALljZx+E'
 
 cryptoRandomString({length: 10, type: 'url-safe'}); // '0pN1Y2Jz.X'
 
-await cryptoRandomStringAsync({length: 10, type: 'url-safe'}); // '7.F5oBY9Qy'
-
 cryptoRandomString({length: 10, type: 'numeric'}); // '1639380067'
-
-await cryptoRandomStringAsync({length: 10, type: 'numeric'}); // '0923903115'
 
 cryptoRandomString({length: 6, type: 'distinguishable'}); // 'H4HH5D'
 
-await cryptoRandomStringAsync({length: 6, type: 'distinguishable'}); // 'D2Y254'
-
 cryptoRandomString({length: 10, type: 'ascii-printable'}); // '#I&J.GP./9'
-
-await cryptoRandomStringAsync({length: 10, type: 'ascii-printable'}); // '7t%FxZkyL('
 
 cryptoRandomString({length: 10, type: 'alphanumeric'}); // 'ZtgC2J6aU5'
 
-await cryptoRandomStringAsync({length: 10, type: 'alphanumeric'}); // 'FELQVN9S8H'
-
 cryptoRandomString({length: 10, characters: 'abc'}); // 'abcabccbcc'
-
-await cryptoRandomStringAsync({length: 10, characters: 'abc'}); // 'abcbbbacbb'
 
 ```
 
@@ -59,9 +43,6 @@ await cryptoRandomStringAsync({length: 10, characters: 'abc'}); // 'abcbbbacbb'
 
 Returns a randomized string. [Hex](https://en.wikipedia.org/wiki/Hexadecimal) by default.
 
-### cryptoRandomStringAsync(options)
-
-Returns a promise which resolves to a randomized string. [Hex](https://en.wikipedia.org/wiki/Hexadecimal) by default.
 
 #### options
 
