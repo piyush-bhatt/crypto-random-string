@@ -1,2 +1,2 @@
-export { randomBytes } from "https://deno.land/std@0.83.0/node/crypto.ts";
-export { promisify } from "https://deno.land/std@0.83.0/node/util.ts";
+export { encodeToString as encodeToHex } from "https://deno.land/std@0.99.0/encoding/hex.ts";
+export { encode as encodeToBase64 } from "https://deno.land/std@0.99.0/encoding/base64.ts";

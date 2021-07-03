@@ -1,5 +1,5 @@
 import { assertEquals, assertMatch, assertThrows } from "./test_deps.ts";
-import { cryptoRandomString, cryptoRandomStringAsync } from "./mod.ts";
+import { cryptoRandomString } from "./mod.ts";
 
 // Probabilistic, result is always less than or equal to actual set size, chance it is less is below 1e-256 for sizes up to 32656
 const generatedCharacterSetSize = (
@@ -23,13 +23,6 @@ Deno.test("main", () => {
   assertEquals(cryptoRandomString({ length: 100 }).length, 100);
   assertMatch(cryptoRandomString({ length: 100 }), /^[a-f\d]*$/); // Sanity check, probabilistic
   assertEquals(generatedCharacterSetSize({}, 16), 16);
-});
-
-Deno.test("async", async () => {
-  assertEquals((await cryptoRandomStringAsync({ length: 0 })).length, 0);
-  assertEquals((await cryptoRandomStringAsync({ length: 10 })).length, 10);
-  assertEquals((await cryptoRandomStringAsync({ length: 100 })).length, 100);
-  assertMatch(await cryptoRandomStringAsync({ length: 100 }), /^[a-f\d]*$/);
 });
 
 Deno.test("hex", () => {
