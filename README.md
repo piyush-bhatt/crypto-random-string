@@ -83,4 +83,4 @@ Cannot be set at the same time as the `type` option.
 
 ## Licensing
 
-[MIT](https://github.com/piyush-bhatt/crypto-random-string/blob/main/LICENSE) licensed 
+[MIT](https://github.com/piyush-bhatt/crypto-random-string/blob/main/LICENSE) licensed
