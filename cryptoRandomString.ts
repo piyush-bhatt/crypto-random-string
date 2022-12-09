@@ -84,7 +84,7 @@ const generateForCustomCharacters: GenerateForCustomCharacters = (
 
 const generateRandomBytes: GenerateRandomBytes = (byteLength, type, length) => {
   const bytes = randomBytes(byteLength);
-  const str = type === "base64" ? encodeToBase64(bytes) : encodeToHex(bytes);
+  const str = type === "base64" ? encodeToBase64(bytes) : new TextDecoder().decode(encodeToHex(bytes));
   return str.slice(0, length);
 };
 
